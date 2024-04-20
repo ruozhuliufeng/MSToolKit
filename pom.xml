@@ -9,9 +9,14 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
-        <module>msk-bom</module>
-        <module>msk-core-auto</module>
-        <module>msk-core-tool</module>
+        <!-- MSTK 统一版本管理 -->
+        <module>mstk-bom</module>
+        <!-- MSTK 自动生成依赖文件 -->
+        <module>mstk-core-auto</module>
+        <!-- MSTK 核心工具类 -->
+        <module>mstk-core-tool</module>
+        <!-- MSTK HTTP工具类 -->
+        <module>mstk-http-starter</module>
     </modules>
 
     <properties>
@@ -19,7 +24,7 @@
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- 依赖版本 -->
-        <msk.version>1.0-SNAPSHOT</msk.version>
+        <mstk.version>1.0-SNAPSHOT</mstk.version>
         <spring.boot.version>3.1.6</spring.boot.version>
         <spring.cloud.version>2022.0.4</spring.cloud.version>
         <commons-collections4.version>4.4</commons-collections4.version>
@@ -35,8 +40,8 @@
             <!-- 工具箱版本 -->
             <dependency>
                 <groupId>tech.msop.platform</groupId>
-                <artifactId>msk-bom</artifactId>
-                <version>${msk.version}</version>
+                <artifactId>mstk-bom</artifactId>
+                <version>${mstk.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
