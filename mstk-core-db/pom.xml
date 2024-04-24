@@ -10,11 +10,8 @@
     </parent>
 
     <artifactId>mstk-core-db</artifactId>
-
-    <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
+    <description>
+        数据库核心工具，支持自动建表
+    </description>
 
 </project>

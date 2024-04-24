@@ -5,8 +5,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 import org.springframework.lang.Nullable;
+import tech.msop.core.tool.constant.MstkConstant;
 
-import javax.servlet.http.HttpServletResponse;
 import java.io.Serializable;
 import java.util.Optional;
 
@@ -104,7 +104,7 @@ public class Result<T> implements Serializable {
 	 * @return R
 	 */
 	public static <T> Result<T> data(T data, String msg) {
-		return data(HttpServletResponse.SC_OK, data, msg);
+		return data(HttpResponseCode.SC_OK, data, msg);
 	}
 
 	/**
@@ -117,7 +117,7 @@ public class Result<T> implements Serializable {
 	 * @return R
 	 */
 	public static <T> Result<T> data(int code, T data, String msg) {
-		return new Result<>(code, data, data == null ? BladeConstant.DEFAULT_NULL_MESSAGE : msg);
+		return new Result<>(code, data, data == null ? MstkConstant.DEFAULT_NULL_MESSAGE : msg);
 	}
 
 	/**
@@ -208,7 +208,7 @@ public class Result<T> implements Serializable {
 	 * @return R
 	 */
 	public static <T> Result<T> status(boolean flag) {
-		return flag ? success(BladeConstant.DEFAULT_SUCCESS_MESSAGE) : fail(BladeConstant.DEFAULT_FAILURE_MESSAGE);
+		return flag ? success(MstkConstant.DEFAULT_SUCCESS_MESSAGE) : fail(MstkConstant.DEFAULT_FAILURE_MESSAGE);
 	}
 
 }
