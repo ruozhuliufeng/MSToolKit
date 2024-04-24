@@ -13,6 +13,7 @@
     <groupId>tech.msop.platform</groupId>
     <artifactId>mstk-bom</artifactId>
     <version>${mstk.version}</version>
+    <packaging>pom</packaging>
     <description>MSTK 统一版本依赖</description>
 
     <properties>

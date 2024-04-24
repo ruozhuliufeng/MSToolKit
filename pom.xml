@@ -17,6 +17,8 @@
         <module>mstk-core-tool</module>
         <!-- MSTK HTTP工具类 -->
         <module>mstk-http-starter</module>
+        <module>mstk-core-auth</module>
+        <module>mstk-core-db</module>
     </modules>
 
     <properties>
