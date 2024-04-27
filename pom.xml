@@ -19,6 +19,8 @@
         <module>mstk-http-starter</module>
         <module>mstk-core-auth</module>
         <module>mstk-core-db</module>
+        <module>mstk-core-context</module>
+        <module>mstk-core-log</module>
     </modules>
 
     <properties>
