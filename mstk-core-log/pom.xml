@@ -20,7 +20,11 @@
             <artifactId>mstk-core-tool</artifactId>
             <version>${mstk.version}</version>
         </dependency>
-
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>transmittable-thread-local</artifactId>
+            <version>2.11.4</version>
+        </dependency>
         <dependency>
             <groupId>tech.msop</groupId>
             <artifactId>mstk-core-auto</artifactId>

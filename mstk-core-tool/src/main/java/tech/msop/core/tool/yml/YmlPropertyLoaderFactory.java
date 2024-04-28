@@ -52,7 +52,7 @@ public class YmlPropertyLoaderFactory extends DefaultPropertySourceFactory {
         return Stream.of(names)
                 .filter(StringUtil::isNotBlank)
                 .findFirst()
-                .orElse("MsYmlPropertySource");
+                .orElse("MstkYmlPropertySource");
     }
 
 }

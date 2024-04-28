@@ -1,6 +1,7 @@
 package tech.msop.core.tool.model;
 
-import javax.servlet.http.HttpServletResponse;
+
+import jakarta.servlet.http.HttpServletResponse;
 
 public enum CodeEnum {
     /**

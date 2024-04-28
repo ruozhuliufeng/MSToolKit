@@ -1,11 +1,11 @@
 package tech.msop.core.tool.utils;
 
 import org.springframework.lang.Nullable;
-import org.springframework.util.Base64Utils;
 
 import javax.crypto.Cipher;
 import java.math.BigInteger;
 import java.security.*;
+import tech.msop.core.tool.tuple.KeyPair;
 import java.security.spec.*;
 import java.util.Objects;
 
@@ -117,7 +117,7 @@ public class RsaUtil {
 	 */
 	public static PublicKey getPublicKey(String base64PubKey) {
 		Objects.requireNonNull(base64PubKey, "base64 public key is null.");
-		byte[] keyBytes = Base64Utils.decodeFromString(base64PubKey);
+		byte[] keyBytes = Base64Util.decodeFromString(base64PubKey);
 		X509EncodedKeySpec keySpec = new X509EncodedKeySpec(keyBytes);
 		try {
 			KeyFactory keyFactory = KeyFactory.getInstance(RSA_ALGORITHM);
@@ -146,7 +146,7 @@ public class RsaUtil {
 	 */
 	public static PrivateKey getPrivateKey(String base64PriKey) {
 		Objects.requireNonNull(base64PriKey, "base64 private key is null.");
-		byte[] keyBytes = Base64Utils.decodeFromString(base64PriKey);
+		byte[] keyBytes = Base64Util.decodeFromString(base64PriKey);
 		PKCS8EncodedKeySpec keySpec = new PKCS8EncodedKeySpec(keyBytes);
 		try {
 			KeyFactory keyFactory = KeyFactory.getInstance(RSA_ALGORITHM);
@@ -163,7 +163,7 @@ public class RsaUtil {
 	 * @return base 64 编码后的 key
 	 */
 	public static String getKeyString(Key key) {
-		return Base64Utils.encodeToString(key.getEncoded());
+		return Base64Util.encodeToString(key.getEncoded());
 	}
 
 	/**
@@ -244,7 +244,7 @@ public class RsaUtil {
 		if (StringUtil.isBlank(data)) {
 			return null;
 		}
-		return Base64Utils.encodeToString(encrypt(base64PublicKey, data.getBytes(Charsets.UTF_8)));
+		return Base64Util.encodeToString(encrypt(base64PublicKey, data.getBytes(Charsets.UTF_8)));
 	}
 
 	/**
@@ -332,7 +332,7 @@ public class RsaUtil {
 		if (StringUtil.isBlank(base64Data)) {
 			return null;
 		}
-		return new String(decrypt(base64PrivateKey, Base64Utils.decodeFromString(base64Data)), Charsets.UTF_8);
+		return new String(decrypt(base64PrivateKey, Base64Util.decodeFromString(base64Data)), Charsets.UTF_8);
 	}
 
 	/**
@@ -343,7 +343,7 @@ public class RsaUtil {
 	 * @return 解密后的数据
 	 */
 	public static byte[] decryptFromBase64(String base64PrivateKey, byte[] base64Data) {
-		return decrypt(base64PrivateKey, Base64Utils.decode(base64Data));
+		return decrypt(base64PrivateKey, Base64Util.decode(base64Data));
 	}
 
 	/**
@@ -358,7 +358,7 @@ public class RsaUtil {
 		if (StringUtil.isBlank(base64Data)) {
 			return null;
 		}
-		return new String(decryptByPublicKeyFromBase64(base64PublicKey, Base64Utils.decodeFromString(base64Data)), Charsets.UTF_8);
+		return new String(decryptByPublicKeyFromBase64(base64PublicKey, Base64Util.decodeFromString(base64Data)), Charsets.UTF_8);
 	}
 
 }
