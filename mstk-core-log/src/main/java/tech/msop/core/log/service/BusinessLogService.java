@@ -1,5 +1,7 @@
 package tech.msop.core.log.service;
 
+import org.aspectj.lang.ProceedingJoinPoint;
+
 /**
  * 业务日志服务接口,自定义服务必须实现该接口
  *

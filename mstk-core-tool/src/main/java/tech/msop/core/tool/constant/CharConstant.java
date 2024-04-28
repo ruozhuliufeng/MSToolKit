@@ -1,12 +1,11 @@
 package tech.msop.core.tool.constant;
 
 /**
- * 静态 Char 常量
+ * Char 单字符类型常量
  *
  * @author ruozhuliufeng
  */
 public interface CharConstant {
-
     // @formatter:off
     char UPPER_A          = 'A';
     char LOWER_A          = 'a';
@@ -54,5 +53,4 @@ public interface CharConstant {
     char ONE              = '1';
     char ZERO             = '0';
     // @formatter:on
-
 }

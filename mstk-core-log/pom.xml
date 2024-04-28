@@ -13,5 +13,18 @@
     <packaging>jar</packaging>
     <description>MSTK 日志服务基础,提供多种日志记录方式</description>
 
+    <dependencies>
+        <!-- MSTK -->
+        <dependency>
+            <groupId>tech.msop</groupId>
+            <artifactId>mstk-core-tool</artifactId>
+            <version>${mstk.version}</version>
+        </dependency>
 
+        <dependency>
+            <groupId>tech.msop</groupId>
+            <artifactId>mstk-core-auto</artifactId>
+            <version>${mstk.version}</version>
+        </dependency>
+    </dependencies>
 </project>

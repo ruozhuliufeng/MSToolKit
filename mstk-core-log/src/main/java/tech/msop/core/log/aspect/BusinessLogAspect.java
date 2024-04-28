@@ -1,11 +1,17 @@
 package tech.msop.core.log.aspect;
 
 import lombok.extern.slf4j.Slf4j;
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.Around;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
 import org.springframework.util.ObjectUtils;
 import org.springframework.util.StringUtils;
 import tech.msop.core.log.annotation.BusinessLog;
 import tech.msop.core.log.service.BusinessLogService;
+import tech.msop.core.tool.exception.BusinessException;
+import tech.msop.core.tool.utils.SpringUtil;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -38,9 +44,9 @@ public class BusinessLogAspect {
         Class<BusinessLogService> beanNameClass = businessLog.value();
         try {
             if (StringUtils.hasText(businessLog.beanName())) {
-                businessLogService = SpringBeanHelperComponent.getBean(businessLog.beanName(), BusinessLogService.class);
+                businessLogService = SpringUtil.getBean(businessLog.beanName(), BusinessLogService.class);
             } else {
-                businessLogService = SpringBeanHelperComponent.getBean(beanNameClass);
+                businessLogService = SpringUtil.getBean(beanNameClass);
             }
         } catch (Throwable e) {
             log.error(e.getMessage());
@@ -55,7 +61,7 @@ public class BusinessLogAspect {
             return rlt;
         } catch (Throwable e)
         {
-            throw new BusinessException(e.getMessage(),e);
+            throw new BusinessException(e.getMessage());
         } finally{
             Long endTime = System.currentTimeMillis();
             Long cost = endTime - beginTime;

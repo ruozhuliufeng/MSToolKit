@@ -17,10 +17,16 @@
         <module>mstk-core-tool</module>
         <!-- MSTK HTTP工具类 -->
         <module>mstk-http-starter</module>
+        <!-- MSTK 认证核心工具类 -->
         <module>mstk-core-auth</module>
+        <!-- MSTK 数据库核心工具类 -->
         <module>mstk-core-db</module>
+        <!-- MSTK 上下文工具类 -->
         <module>mstk-core-context</module>
+        <!-- MSTK 日志核心工具类 -->
         <module>mstk-core-log</module>
+        <!-- MSTK 启动核心工具类 -->
+        <module>mstk-core-launch</module>
     </modules>
 
     <properties>

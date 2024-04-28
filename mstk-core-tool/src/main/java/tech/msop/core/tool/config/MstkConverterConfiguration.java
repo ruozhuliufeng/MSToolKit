@@ -1,18 +1,16 @@
 package tech.msop.core.tool.config;
 
-
-import org.springframework.boot.autoconfigure.AutoConfiguration;
-import org.springframework.format.FormatterRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import tech.msop.core.tool.convert.EnumToStringConverter;
 import tech.msop.core.tool.convert.StringToEnumConverter;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.format.FormatterRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 /**
- * blade enum 《-》 String 转换配置
- *
+ * Ms enum <=> String 转换配置
  * @author ruozhuliufeng
  */
-@AutoConfiguration
+@Configuration
 public class MstkConverterConfiguration implements WebMvcConfigurer {
 
     @Override
@@ -20,5 +18,4 @@ public class MstkConverterConfiguration implements WebMvcConfigurer {
         registry.addConverter(new EnumToStringConverter());
         registry.addConverter(new StringToEnumConverter());
     }
-
 }

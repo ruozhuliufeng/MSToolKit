@@ -1,19 +1,3 @@
-/*
- *      Copyright (c) 2018-2028, ruozhuliufeng Zhuang All rights reserved.
- *
- *  Redistribution and use in source and binary forms, with or without
- *  modification, are permitted provided that the following conditions are met:
- *
- *  Redistributions of source code must retain the above copyright notice,
- *  this list of conditions and the following disclaimer.
- *  Redistributions in binary form must reproduce the above copyright
- *  notice, this list of conditions and the following disclaimer in the
- *  documentation and/or other materials provided with the distribution.
- *  Neither the name of the dreamlu.net developer nor the names of its
- *  contributors may be used to endorse or promote products derived from
- *  this software without specific prior written permission.
- *  Author: ruozhuliufeng 庄骞 (ruozhuliufeng@163.com)
- */
 package tech.msop.core.tool.jackson;
 
 import com.fasterxml.jackson.core.JsonParser;
@@ -21,10 +5,12 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.TreeNode;
 import com.fasterxml.jackson.core.json.JsonReadFeature;
 import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.type.CollectionLikeType;
 import com.fasterxml.jackson.databind.type.MapType;
+import tech.msop.core.tool.constant.StringConstant;
+import tech.msop.core.tool.utils.*;
 import lombok.extern.slf4j.Slf4j;
-import org.springblade.core.tool.utils.*;
 import org.springframework.lang.Nullable;
 
 import java.io.IOException;
@@ -179,8 +165,8 @@ public class JsonUtil {
 	public static <T> List<T> parseArray(String content, Class<T> valueTypeRef) {
 		try {
 
-			if (!StringUtil.startsWithIgnoreCase(content, StringPool.LEFT_SQ_BRACKET)) {
-				content = StringPool.LEFT_SQ_BRACKET + content + StringPool.RIGHT_SQ_BRACKET;
+			if (!StringUtil.startsWithIgnoreCase(content, StringConstant.LEFT_SQ_BRACKET)) {
+				content = StringConstant.LEFT_SQ_BRACKET + content + StringConstant.RIGHT_SQ_BRACKET;
 			}
 
 			List<Map<String, Object>> list = getInstance().readValue(content, new TypeReference<List<Map<String, Object>>>() {

@@ -4,40 +4,38 @@ import java.io.Serializable;
 import java.util.List;
 
 /**
- * Created by Blade.
+ * 节点
  *
  * @author ruozhuliufeng
  */
 public interface INode<T> extends Serializable {
+    /**
+     * 主键
+     *
+     * @return Integer
+     */
+    Long getId();
 
-	/**
-	 * 主键
-	 *
-	 * @return Long
-	 */
-	Long getId();
+    /**
+     * 父主键
+     *
+     * @return Integer
+     */
+    Long getParentId();
 
-	/**
-	 * 父主键
-	 *
-	 * @return Long
-	 */
-	Long getParentId();
+    /**
+     * 子孙节点
+     *
+     * @return List
+     */
+    List<T> getChildren();
 
-	/**
-	 * 子孙节点
-	 *
-	 * @return List<T>
-	 */
-	List<T> getChildren();
-
-	/**
-	 * 是否有子孙节点
-	 *
-	 * @return Boolean
-	 */
-	default Boolean getHasChildren() {
-		return false;
-	}
-
+    /**
+     * 是否有子孙节点
+     *
+     * @return 默认为否
+     */
+    default Boolean getHasChildren() {
+        return false;
+    }
 }

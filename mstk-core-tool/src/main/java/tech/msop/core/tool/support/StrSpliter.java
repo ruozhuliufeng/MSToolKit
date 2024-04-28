@@ -1,8 +1,8 @@
 package tech.msop.core.tool.support;
 
-import org.springblade.core.tool.utils.Func;
-import org.springblade.core.tool.utils.StringPool;
-import org.springblade.core.tool.utils.StringUtil;
+import tech.msop.core.tool.constant.StringConstant;
+import tech.msop.core.tool.utils.Func;
+import tech.msop.core.tool.utils.StringUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -49,7 +49,7 @@ public class StrSpliter {
 	 * @since 3.0.8
 	 */
 	public static List<String> splitPath(String str, int limit) {
-		return split(str, StringPool.SLASH, limit, true, true);
+		return split(str, StringConstant.SLASH, limit, true, true);
 	}
 
 	/**

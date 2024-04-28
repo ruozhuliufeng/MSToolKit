@@ -40,7 +40,7 @@ public class AutoFactoriesProcessor extends AbstractMsProcessor {
 	/**
 	 * Feign 自动配置
 	 */
-	private static final String FEIGN_AUTO_CONFIGURE_KEY = "tech.msop.core.cloud.feign.MskFeignAutoConfiguration";
+	private static final String FEIGN_AUTO_CONFIGURE_KEY = "tech.msop.core.cloud.feign.MstkFeignAutoConfiguration";
 	/**
 	 * The location to look for factories.
 	 * <p>Can be present in multiple JAR files.

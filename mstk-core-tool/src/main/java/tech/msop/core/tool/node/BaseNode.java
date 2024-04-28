@@ -15,45 +15,42 @@ import java.util.List;
  */
 @Data
 public class BaseNode<T> implements INode<T> {
+    private static final long serialVersionUID = 1L;
 
-	private static final long serialVersionUID = 1L;
+    /**
+     * 主键ID
+     */
+    @JsonSerialize(using = ToStringSerializer.class)
+    protected Long id;
+    /**
+     * 父节点ID
+     */
+    @JsonSerialize(using = ToStringSerializer.class)
+    protected Long parentId;
 
-	/**
-	 * 主键ID
-	 */
-	@JsonSerialize(using = ToStringSerializer.class)
-	protected Long id;
+    /**
+     * 子孙节点
+     */
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    private List<T> children = new ArrayList<>();
 
-	/**
-	 * 父节点ID
-	 */
-	@JsonSerialize(using = ToStringSerializer.class)
-	protected Long parentId;
+    /**
+     * 是否有子孙节点
+     */
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    private Boolean hasChildren;
 
-	/**
-	 * 子孙节点
-	 */
-	@JsonInclude(JsonInclude.Include.NON_EMPTY)
-	protected List<T> children = new ArrayList<T>();
-
-	/**
-	 * 是否有子孙节点
-	 */
-	@JsonInclude(JsonInclude.Include.NON_EMPTY)
-	private Boolean hasChildren;
-
-	/**
-	 * 是否有子孙节点
-	 *
-	 * @return Boolean
-	 */
-	@Override
-	public Boolean getHasChildren() {
-		if (children.size() > 0) {
-			return true;
-		} else {
-			return this.hasChildren;
-		}
-	}
-
+    /**
+     * 判断是否有子孙节点
+     *
+     * @return true/false
+     */
+    @Override
+    public Boolean getHasChildren() {
+        if (children.size() > 0) {
+            return true;
+        } else {
+            return this.hasChildren;
+        }
+    }
 }

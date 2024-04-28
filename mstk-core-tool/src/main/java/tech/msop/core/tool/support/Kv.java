@@ -1,22 +1,6 @@
-/*
- *      Copyright (c) 2018-2028, ruozhuliufeng Zhuang All rights reserved.
- *
- *  Redistribution and use in source and binary forms, with or without
- *  modification, are permitted provided that the following conditions are met:
- *
- *  Redistributions of source code must retain the above copyright notice,
- *  this list of conditions and the following disclaimer.
- *  Redistributions in binary form must reproduce the above copyright
- *  notice, this list of conditions and the following disclaimer in the
- *  documentation and/or other materials provided with the distribution.
- *  Neither the name of the dreamlu.net developer nor the names of its
- *  contributors may be used to endorse or promote products derived from
- *  this software without specific prior written permission.
- *  Author: ruozhuliufeng 庄骞 (smallruozhuliufeng@163.com)
- */
 package tech.msop.core.tool.support;
 
-import org.springblade.core.tool.utils.Func;
+import tech.msop.core.tool.utils.Func;
 import org.springframework.util.LinkedCaseInsensitiveMap;
 
 import java.sql.Time;
@@ -61,19 +45,12 @@ public class Kv extends LinkedCaseInsensitiveMap<Object> {
 		return this;
 	}
 
-	/**
-	 * 设置全部
-	 *
-	 * @param map 属性
-	 * @return 本身
-	 */
-	public Kv setAll(Map<? extends String, ?> map) {
-		if (map != null) {
+	public Kv setAll(Map<? extends String,?> map){
+		if(map != null){
 			this.putAll(map);
 		}
 		return this;
 	}
-
 	/**
 	 * 设置列，当键或值为null时忽略
 	 *
@@ -82,7 +59,7 @@ public class Kv extends LinkedCaseInsensitiveMap<Object> {
 	 * @return 本身
 	 */
 	public Kv setIgnoreNull(String attr, Object value) {
-		if (attr != null && value != null) {
+		if (null != attr && null != value) {
 			set(attr, value);
 		}
 		return this;
@@ -100,7 +77,6 @@ public class Kv extends LinkedCaseInsensitiveMap<Object> {
 	 * @param defaultValue 默认值
 	 * @return 字段值
 	 */
-	@SuppressWarnings("unchecked")
 	public <T> T get(String attr, T defaultValue) {
 		final Object result = get(attr);
 		return (T) (result != null ? result : defaultValue);

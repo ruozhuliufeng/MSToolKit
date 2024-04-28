@@ -1,16 +1,13 @@
 package tech.msop.core.tool.support;
 
-import org.springblade.core.tool.utils.Exceptions;
-import org.springframework.lang.Nullable;
+import tech.msop.core.tool.utils.Exceptions;
 
 import java.util.Objects;
-import java.util.function.Consumer;
 import java.util.function.Function;
-import java.util.function.Supplier;
 
 /**
- * Lambda 受检异常处理
- * https://segmentfault.com/a/1190000007832130
+ * 当 Lambda 遇上受检异常
+ * <a href="https://segmentfault.com/a/1190000007832130">https://segmentfault.com/a/1190000007832130</a>
  *
  * @author ruozhuliufeng
  */
@@ -27,62 +24,14 @@ public class Try {
 		};
 	}
 
-	public static <T> Consumer<T> of(UncheckedConsumer<T> mapper) {
-		Objects.requireNonNull(mapper);
-		return t -> {
-			try {
-				mapper.accept(t);
-			} catch (Exception e) {
-				throw Exceptions.unchecked(e);
-			}
-		};
-	}
-
-	public static <T> Supplier<T> of(UncheckedSupplier<T> mapper) {
-		Objects.requireNonNull(mapper);
-		return () -> {
-			try {
-				return mapper.get();
-			} catch (Exception e) {
-				throw Exceptions.unchecked(e);
-			}
-		};
-	}
-
 	@FunctionalInterface
 	public interface UncheckedFunction<T, R> {
 		/**
-		 * apply
-		 *
-		 * @param t
-		 * @return
-		 * @throws Exception
+		 * 调用
+		 * @param t t
+		 * @return R
+		 * @throws Exception Exception
 		 */
-		@Nullable
-		R apply(@Nullable T t) throws Exception;
-	}
-
-	@FunctionalInterface
-	public interface UncheckedConsumer<T> {
-		/**
-		 * accept
-		 *
-		 * @param t
-		 * @throws Exception
-		 */
-		@Nullable
-		void accept(@Nullable T t) throws Exception;
-	}
-
-	@FunctionalInterface
-	public interface UncheckedSupplier<T> {
-		/**
-		 * get
-		 *
-		 * @return
-		 * @throws Exception
-		 */
-		@Nullable
-		T get() throws Exception;
+		R apply(T t) throws Exception;
 	}
 }

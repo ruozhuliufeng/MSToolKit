@@ -9,23 +9,23 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * 跟踪类变动比较
+ * 跟踪字段变动
  *
- * @author L.cm
+ * @author ruozhuliufeng
  */
 @Getter
 @ToString
 public class BeanDiff {
-	/**
-	 * 变更字段
- 	 */
-	private final Set<String> fields = new HashSet<>();
-	/**
-	 * 旧值
-	 */
-	private final Map<String, Object> oldValues = new HashMap<>();
-	/**
-	 * 新值
-	 */
-	private final Map<String, Object> newValues = new HashMap<>();
+    /**
+     * 变更字段
+     */
+    private final Set<String> fields = new HashSet<>();
+    /**
+     * 旧值
+     */
+    private final Map<String, Object> oldValues = new HashMap<>();
+    /**
+     * 新值
+     */
+    private final Map<String, Object> newValues = new HashMap<>();
 }

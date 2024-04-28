@@ -1,12 +1,12 @@
 package tech.msop.core.tool.convert;
 
+import tech.msop.core.tool.function.CheckedFunction;
+import tech.msop.core.tool.utils.ClassUtil;
+import tech.msop.core.tool.utils.ConvertUtil;
+import tech.msop.core.tool.utils.ReflectUtil;
+import tech.msop.core.tool.utils.Unchecked;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springblade.core.tool.function.CheckedFunction;
-import org.springblade.core.tool.utils.ClassUtil;
-import org.springblade.core.tool.utils.ConvertUtil;
-import org.springblade.core.tool.utils.ReflectUtil;
-import org.springblade.core.tool.utils.Unchecked;
 import org.springframework.cglib.core.Converter;
 import org.springframework.core.convert.TypeDescriptor;
 import org.springframework.lang.Nullable;
@@ -33,7 +33,7 @@ public class MstkConverter implements Converter {
 	 *
 	 * @param value     源对象属性
 	 * @param target    目标对象属性类
-	 * @param fieldName 目标的field名，原为 set 方法名，BladeBeanCopier 里做了更改
+	 * @param fieldName 目标的field名，原为 set 方法名，MsBeanCopier 里做了更改
 	 * @return {Object}
 	 */
 	@Override
@@ -56,7 +56,7 @@ public class MstkConverter implements Converter {
 				return ConvertUtil.convert(value, sourceDescriptor, targetDescriptor);
 			}
 		} catch (Throwable e) {
-			log.warn("BladeConverter error", e);
+			log.warn("MsConverter error", e);
 			return null;
 		}
 	}
