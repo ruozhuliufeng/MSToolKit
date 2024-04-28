@@ -18,18 +18,17 @@
 
     <properties>
         <mstk.version>1.0-SNAPSHOT</mstk.version>
-        <guava.version>30.1.1-jre</guava.version>
+        <guava.version>30.0-jre</guava.version>
         <swagger.version>2.10.5</swagger.version>
         <swagger.models.version>1.6.2</swagger.models.version>
         <knife4j.version>2.0.9</knife4j.version>
-        <mybatis.plus.version>3.5.2</mybatis.plus.version>
-        <mybatis.plus.generator.version>3.5.3</mybatis.plus.generator.version>
+        <mybatis.plus.version>3.5.1</mybatis.plus.version>
         <mybatis.plus.dynamic.version>3.3.6</mybatis.plus.dynamic.version>
         <protostuff.version>1.6.0</protostuff.version>
         <disruptor.version>3.4.2</disruptor.version>
         <logstash.version>6.2</logstash.version>
         <druid.version>1.2.8</druid.version>
-        <jackson.version>2.13.3</jackson.version>
+        <jackson.version>2.11.4</jackson.version>
         <okhttp.version>4.9.3</okhttp.version>
         <xxl.job.verison>2.1.2</xxl.job.verison>
         <mysql.connector.version>8.0.22</mysql.connector.version>
@@ -37,11 +36,11 @@
         <postgresql.connector.version>42.2.22</postgresql.connector.version>
         <sqlserver.connector.version>8.4.1.jre8</sqlserver.connector.version>
         <dameng.connector.version>8.1.2.79</dameng.connector.version>
-        <spring.boot.admmin.version>2.7.1</spring.boot.admmin.version>
-        <alibaba.cloud.version>2021.0.1.0</alibaba.cloud.version>
-        <alibaba.seata.version>1.5.2</alibaba.seata.version>
+        <spring.boot.admmin.version>2.3.1</spring.boot.admmin.version>
+        <alibaba.cloud.version>2.2.7.RELEASE</alibaba.cloud.version>
+        <alibaba.seata.version>1.4.2</alibaba.seata.version>
         <mybatis.spring.version>2.0.5</mybatis.spring.version>
-        <mybatis.version>3.5.6</mybatis.version>
+        <mybatis.version>3.5.5</mybatis.version>
         <mybatis.typehandlers.version>1.0.2</mybatis.typehandlers.version>
         <jjwt.version>0.11.2</jjwt.version>
         <spring.plugin.version>2.0.0.RELEASE</spring.plugin.version>
@@ -50,51 +49,20 @@
         <janino.version>3.0.15</janino.version>
         <jsr305.version>3.0.2</jsr305.version>
         <JustAuth.version>1.16.5</JustAuth.version>
-        <easyexcel.version>2.2.11</easyexcel.version>
+        <easyexcel.version>2.2.6</easyexcel.version>
         <captcha.version>1.6.2</captcha.version>
-        <fastjson.version>1.2.83_noneautotype</fastjson.version>
-        <sentinel.version>1.8.4</sentinel.version>
-        <alibaba.nacos.version>2.1.0</alibaba.nacos.version>
-        <micrometer.version>1.9.1</micrometer.version>
+        <fastjson.version>1.2.74</fastjson.version>
+        <sentinel.version>1.8.0</sentinel.version>
+        <alibaba.nacos.version>2.0.4</alibaba.nacos.version>
+        <micrometer.version>1.6.3</micrometer.version>
         <aliyun.oss.version>3.14.0</aliyun.oss.version>
         <minio.oss.version>8.3.7</minio.oss.version>
-        <qiniu.oss.version>7.11.0</qiniu.oss.version>
+        <qiniu.oss.version>7.9.4</qiniu.oss.version>
         <tencent.cos.version>5.6.69</tencent.cos.version>
         <huaweicloud.obs.version>3.21.12</huaweicloud.obs.version>
         <aliyun.sdk.version>4.5.30</aliyun.sdk.version>
         <yunpian.sdk.version>1.2.7</yunpian.sdk.version>
-        <tencent.sms.version>1.0.6</tencent.sms.version>
-        <ureport.version>2.2.9</ureport.version>
-        <velocity.version>1.7</velocity.version>
-        <spring.security.oauth2.version>2.3.8.RELEASE</spring.security.oauth2.version>
-        <spring.cloud.oauth2.version>2.2.5.RELEASE</spring.cloud.oauth2.version>
-        <log4j2.version>2.18.0</log4j2.version>
-        <logback.version>1.2.11</logback.version>
-        <tika.version>2.4.1</tika.version>
-        <sardine.version>5.10</sardine.version>
-        <jsch.version>0.1.55</jsch.version>
-        <ftp.version>3.8.0</ftp.version>
-        <hutool.version>5.8.5</hutool.version>
-        <aws.s3.version>1.12.272</aws.s3.version>
-        <upyun.version>4.2.3</upyun.version>
-        <bce.version>0.10.218</bce.version>
-        <google.cloud.storage.version>2.14.0</google.cloud.storage.version>
-        <thumbnailator.version>0.4.17</thumbnailator.version>
-        <alibaba.transmittable.version>2.12.1</alibaba.transmittable.version>
-        <reflections.version>0.9.11</reflections.version>
-        <curator.version>5.1.0</curator.version>
-        <!-- plugin -->
-        <java.version>1.8</java.version>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
-        <maven-source-plugin.version>3.2.1</maven-source-plugin.version>
-        <maven-javadoc-plugin.version>3.3.1</maven-javadoc-plugin.version>
-        <nexus-staging-maven-plugin.version>1.6.8</nexus-staging-maven-plugin.version>
-        <maven-gpg-plugin.version>3.0.1</maven-gpg-plugin.version>
-        <flatten-maven-plugin.version>1.2.7</flatten-maven-plugin.version>
-
+        <tencent.sms.version>4.0.6</tencent.sms.version>
     </properties>
 
     <!-- 依赖版本管理 -->
@@ -112,8 +80,6 @@
                 <version>${msk.version}</version>
             </dependency>
             <!-- MSK 工具箱 END -->
-
-
             <!-- Nacos -->
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
@@ -166,11 +132,6 @@
             <dependency>
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-generator</artifactId>
-                <version>${mybatis.plus.generator.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.baomidou</groupId>
-                <artifactId>mybatis-plus-extension</artifactId>
                 <version>${mybatis.plus.version}</version>
             </dependency>
             <dependency>
@@ -270,11 +231,6 @@
             <dependency>
                 <groupId>com.github.xiaoymin</groupId>
                 <artifactId>knife4j-micro-spring-boot-starter</artifactId>
-                <version>${knife4j.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.github.xiaoymin</groupId>
-                <artifactId>knife4j-aggregation-spring-boot-starter</artifactId>
                 <version>${knife4j.version}</version>
             </dependency>
             <dependency>
@@ -402,23 +358,6 @@
                 <artifactId>micrometer-registry-prometheus</artifactId>
                 <version>${micrometer.version}</version>
             </dependency>
-            <!-- 糊涂工具类 -->
-            <dependency>
-                <groupId>cn.hutool</groupId>
-                <artifactId>hutool-extra</artifactId>
-                <version>${hutool.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>cn.hutool</groupId>
-                <artifactId>hutool-core</artifactId>
-                <version>${hutool.version}</version>
-            </dependency>
-            <!-- 图片处理 https://github.com/coobird/thumbnailator -->
-            <dependency>
-                <groupId>net.coobird</groupId>
-                <artifactId>thumbnailator</artifactId>
-                <version>${thumbnailator.version}</version>
-            </dependency>
             <!-- AliOss -->
             <dependency>
                 <groupId>com.aliyun.oss</groupId>
@@ -443,55 +382,13 @@
                 <artifactId>cos_api</artifactId>
                 <version>${tencent.cos.version}</version>
             </dependency>
-            <!-- WebDAV -->
-            <dependency>
-                <groupId>com.github.lookfirst</groupId>
-                <artifactId>sardine</artifactId>
-                <version>${sardine.version}</version>
-            </dependency>
-            <!-- SFTP -->
-            <dependency>
-                <groupId>com.jcraft</groupId>
-                <artifactId>jsch</artifactId>
-                <version>${jsch.version}</version>
-            </dependency>
-            <!-- FTP -->
-            <dependency>
-                <groupId>commons-net</groupId>
-                <artifactId>commons-net</artifactId>
-                <version>${ftp.version}</version>
-            </dependency>
-            <!-- AWS S3 -->
-            <dependency>
-                <groupId>com.amazonaws</groupId>
-                <artifactId>aws-java-sdk-s3</artifactId>
-                <version>${aws.s3.version}</version>
-            </dependency>
-            <!-- 又拍云 -->
-            <dependency>
-                <groupId>com.upyun</groupId>
-                <artifactId>java-sdk</artifactId>
-                <version>${upyun.version}</version>
-            </dependency>
-            <!-- 百度云 BOS -->
-            <dependency>
-                <groupId>com.baidubce</groupId>
-                <artifactId>bce-java-sdk</artifactId>
-                <version>${bce.version}</version>
-            </dependency>
-            <!-- 谷歌云 Google Cloud Platform Storage -->
-            <dependency>
-                <groupId>com.google.cloud</groupId>
-                <artifactId>google-cloud-storage</artifactId>
-                <version>${google.cloud.storage.version}</version>
-            </dependency>
-            <!-- 华为云 OBS -->
+            <!-- 华为云OBS -->
             <dependency>
                 <groupId>com.huaweicloud</groupId>
                 <artifactId>esdk-obs-java</artifactId>
                 <version>${huaweicloud.obs.version}</version>
             </dependency>
-            <!-- 阿里云 SMS -->
+            <!-- 阿里云SMS -->
             <dependency>
                 <groupId>com.aliyun</groupId>
                 <artifactId>aliyun-java-sdk-core</artifactId>
@@ -509,104 +406,13 @@
                 <artifactId>qcloudsms</artifactId>
                 <version>${tencent.sms.version}</version>
             </dependency>
-            <!-- oauth2 -->
-            <dependency>
-                <groupId>org.springframework.security.oauth</groupId>
-                <artifactId>spring-security-oauth2</artifactId>
-                <version>${spring.security.oauth2.version}</version>
-            </dependency>
             <!-- findbugs -->
             <dependency>
                 <groupId>com.google.code.findbugs</groupId>
                 <artifactId>jsr305</artifactId>
                 <version>${jsr305.version}</version>
             </dependency>
-            <!-- ureport -->
-            <dependency>
-                <groupId>com.bstek.ureport</groupId>
-                <artifactId>ureport2-console</artifactId>
-                <version>${ureport.version}</version>
-            </dependency>
-            <!-- 模板引擎 velocity -->
-            <dependency>
-                <groupId>org.apache.velocity</groupId>
-                <artifactId>velocity</artifactId>
-                <version>${velocity.version}</version>
-            </dependency>
-            <!-- log4j2 -->
-            <dependency>
-                <groupId>org.apache.logging.log4j</groupId>
-                <artifactId>log4j-api</artifactId>
-                <version>${log4j2.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.logging.log4j</groupId>
-                <artifactId>log4j-core</artifactId>
-                <version>${log4j2.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.logging.log4j</groupId>
-                <artifactId>log4j-jul</artifactId>
-                <version>${log4j2.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.logging.log4j</groupId>
-                <artifactId>log4j-slf4j-impl</artifactId>
-                <version>${log4j2.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.logging.log4j</groupId>
-                <artifactId>log4j-to-slf4j</artifactId>
-                <version>${log4j2.version}</version>
-            </dependency>
-            <!-- logback -->
-            <dependency>
-                <groupId>ch.qos.logback</groupId>
-                <artifactId>logback-classic</artifactId>
-                <version>${logback.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>ch.qos.logback</groupId>
-                <artifactId>logback-core</artifactId>
-                <version>${logback.version}</version>
-            </dependency>
-            <!-- Tika -->
-            <dependency>
-                <groupId>org.apache.tika</groupId>
-                <artifactId>tika-core</artifactId>
-                <version>${tika.version}</version>
-            </dependency>
-            <!-- Spring Cloud Oauth2 -->
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-starter-oauth2</artifactId>
-                <version>${spring.cloud.oauth2.version}</version>
-            </dependency>
-            <!-- Alibaba 线程 -->
-            <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>transmittable-thread-local</artifactId>
-                <version>${alibaba.transmittable.version}</version>
-            </dependency>
-            <!-- 反射工具类 -->
-            <dependency>
-                <groupId>org.reflections</groupId>
-                <artifactId>reflections</artifactId>
-                <version>${reflections.version}</version>
-            </dependency>
-            <!-- Zookeeper curator框架 -->
-            <dependency>
-                <groupId>org.apache.curator</groupId>
-                <artifactId>curator-recipes</artifactId>
-                <version>${curator.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.curator</groupId>
-                <artifactId>curator-framework</artifactId>
-                <version>${curator.version}</version>
-            </dependency>
         </dependencies>
-
     </dependencyManagement>
 
 </project>
