@@ -17,6 +17,8 @@
     <description>MSTK 统一版本依赖</description>
 
     <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
         <mstk.version>1.0-SNAPSHOT</mstk.version>
         <guava.version>30.0-jre</guava.version>
         <swagger.version>2.10.5</swagger.version>
