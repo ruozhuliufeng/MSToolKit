@@ -1,4 +1,4 @@
-package tech.msop.core.result;
+package tech.msop.core.result.common;
 
 /**
  * IResult 响应码与响应信息

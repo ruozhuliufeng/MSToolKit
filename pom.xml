@@ -27,6 +27,8 @@
         <module>mstk-core-log</module>
         <!-- MSTK 启动核心工具类 -->
         <module>mstk-core-launch</module>
+        <!-- MSTK 通用响应数据 -->
+        <module>mstk-core-result</module>
     </modules>
 
     <properties>

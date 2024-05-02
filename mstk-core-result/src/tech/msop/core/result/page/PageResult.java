@@ -1,4 +1,4 @@
-package tech.msop.core.result;
+package tech.msop.core.result.page;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
