@@ -81,6 +81,46 @@
                 <artifactId>msk-core-tool</artifactId>
                 <version>${mstk.version}</version>
             </dependency>
+            <dependency>
+                <groupId>tech.msop</groupId>
+                <artifactId>mstk-core-auth</artifactId>
+                <version>${mstk.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>tech.msop</groupId>
+                <artifactId>mstk-core-auto</artifactId>
+                <version>${mstk.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>tech.msop</groupId>
+                <artifactId>mstk-core-context</artifactId>
+                <version>${mstk.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>tech.msop</groupId>
+                <artifactId>mstk-core-db</artifactId>
+                <version>${mstk.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>tech.msop</groupId>
+                <artifactId>mstk-core-launch</artifactId>
+                <version>${mstk.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>tech.msop</groupId>
+                <artifactId>mstk-core-log</artifactId>
+                <version>${mstk.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>tech.msop</groupId>
+                <artifactId>mstk-core-result</artifactId>
+                <version>${mstk.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>tech.msop</groupId>
+                <artifactId>mstk-http-starter</artifactId>
+                <version>${mstk.version}</version>
+            </dependency>
             <!-- MSK 工具箱 END -->
             <!-- Nacos -->
             <dependency>
