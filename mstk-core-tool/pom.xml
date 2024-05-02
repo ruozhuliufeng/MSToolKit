@@ -19,13 +19,15 @@
         <dependency>
             <groupId>tech.msop</groupId>
             <artifactId>mstk-core-auto</artifactId>
-            <version>${mstk.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>tech.msop</groupId>
             <artifactId>mstk-core-launch</artifactId>
-            <version>${mstk.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>tech.msop</groupId>
+            <artifactId>mstk-core-result</artifactId>
         </dependency>
         <!-- Jackson -->
         <dependency>

@@ -1,6 +1,5 @@
 package tech.msop.core.tool.exception;
 
-import tech.msop.core.tool.model.Result;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.HttpMediaTypeNotSupportedException;
@@ -8,6 +7,7 @@ import org.springframework.web.HttpRequestMethodNotSupportedException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
+import tech.msop.core.result.common.Result;
 
 import java.nio.file.AccessDeniedException;
 import java.sql.SQLException;

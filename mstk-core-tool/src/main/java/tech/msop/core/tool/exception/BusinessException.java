@@ -1,7 +1,8 @@
 package tech.msop.core.tool.exception;
 
-import tech.msop.core.tool.model.CodeEnum;
 import lombok.Getter;
+import tech.msop.core.result.common.CodeEnum;
+import tech.msop.core.result.common.IResult;
 
 /**
  * 业务异常
@@ -10,21 +11,21 @@ public class BusinessException extends RuntimeException {
     private static final long serialVersionUID = 6610083281801529147L;
 
     @Getter
-    private final CodeEnum codeEnum;
+    private final IResult result;
 
     public BusinessException(String message) {
         super(message);
-        this.codeEnum = CodeEnum.FAILURE;
+        this.result = CodeEnum.FAILURE;
     }
 
-    public BusinessException(CodeEnum codeEnum) {
-        super(codeEnum.getMessage());
-        this.codeEnum = codeEnum;
+    public BusinessException(IResult result) {
+        super(result.getMessage());
+        this.result = result;
     }
 
-    public BusinessException(CodeEnum codeEnum,Throwable cause){
+    public BusinessException(IResult result,Throwable cause){
         super(cause);
-        this.codeEnum = codeEnum;
+        this.result = result;
     }
 
 
